@@ -99,10 +99,10 @@ while (loop == 'true'):
             print "Logged in successfully as " + username
             loop = 'false'
         else:
-            print "USERNAME SALAH COEG!"
+            print "PASSWORD SALAH COEG!"
             os.system('xdg-open https://wa.me/6282282143238')
     else:
-        print "PASSWORD SALAH COEG!"
+        print "USERNAME SALAH COEG!"
         os.system('xdg-open https://wa.me/6282282143238')
 
 def login():
@@ -151,7 +151,7 @@ def login():
 				print"\n\x1b[1;91m[!] Tidak ada koneksi"
 				keluar()
 		if 'checkpoint' in url:
-			print("\n\x1b[1;92m[!] akun anda kena Checkpoint")
+			print("\n\x1b[1;91m[!] akun anda kena Checkpoint")
 			os.system('rm -rf login.txt')
 			time.sleep(1)
 			keluar()
@@ -187,7 +187,7 @@ def menu():
 		time.sleep(1)
 		login()
 	except requests.exceptions.ConnectionError:
-		print"\x1b[1;92m[!] tidak ada koneksi"
+		print"\x1b[1;91m[!] tidak ada koneksi"
 		keluar()
 	os.system("clear")
 	print logo
